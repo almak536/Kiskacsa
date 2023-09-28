@@ -17,3 +17,4 @@ print('Haliho {0}{1}'.format(titulus, nev))
 print('jobbra'.rjust(50,'_'))
 print('balra'.ljust(50,'*'))
 print('center'.center(50))
+
