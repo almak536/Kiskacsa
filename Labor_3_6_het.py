@@ -82,6 +82,27 @@ def jelszo_ellenorzese(felhasznalo_jelszo):
 def beleptetes():
     pass
 
+def jelszo_generator(hossz, kisbetu, nagybetu, szam):
+    import string
+    import random
+    jelszo = ""
+    karaktersor = ""
+
+    if kisbetu:
+        karaktersor = karaktersor + string.ascii_lowercase
+
+    if nagybetu:
+        karaktersor = karaktersor + string.ascii_uppercase
+
+    if szam:
+        karaktersor = karaktersor + string.digits
+
+
+    for _ in range(hossz):  # "i"-t váltjuk ki ha nem használjuk az "i"-t
+        jelszo = jelszo + karaktersor[random.randint(0, len(karaktersor)-1)]
+
+    return jelszo
+
 
 #innen kezdődik a programunk
 if regisztracio():
